@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hi-TECH.net</title>
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <link rel="icon" type="image/png" href="img/logo.svg">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR START -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="img/logo.svg" alt="logo HiTECH.net" width="30" loading="lazy">
+                HiTech.NET</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <h1 class="mt-4">Produit: AOC 24B1XHS</h1>
+                <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="img/avataaars.png" alt="avatar admin" width="50"> Bob
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Mon compte</a></li>
+                            <li><a class="dropdown-item" href="#">Déconnexion</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Chat</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR END-->
+
+
+
+    <!-- CONTENT START -->
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-1 d-none d-md-block col-md-3 pt-3">
+                <section>
+                    <h4><i class="fa fa-home">&nbsp;</i>Accueil</h4>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-item nav-link" href="#">Tableau de bord</a>
+                    </nav>
+                </section>
+                <section>
+                    <h4><i class="fa fa-globe">&nbsp;</i>Site web</h4>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-item nav-link" href="#">Gestion des rubriques</a>
+                        <a class="nav-item nav-link" href="#">Gestion des actualités</a>
+                    </nav>
+                </section>
+                <section>
+                    <h4><i class="fa fa-shopping-basket">&nbsp;</i>Boutique</h4>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-item nav-link" href="#">Gestion des rayons</a>
+                        <a class="nav-item nav-link active" href="#">Gestion des produits</a>
+                        <a class="nav-item nav-link" href="#">Gestion des commandes</a>
+                    </nav>
+                </section>
+                <section>
+                    <h4><i class="fa fa-cogs">&nbsp;</i>Paramètres</h4>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-item nav-link" href="#">Gestion des utilisateurs</a>
+                        <a class="nav-item nav-link" href="#">Gestion des rôles</a>
+                        <a class="nav-item nav-link" href="#">Préférences</a>
+                    </nav>
+                </section>
+            </aside>
+
+            <main class="col-11 col-md-9 mt-4">
+                <section class="row mt-3">
+                    <div class="col-md-6 d-flex pb-3">
+                        <button class="btn btn-sm btn-outline-secondary">
+                            <i class="fa fa-times"></i>&nbsp;Annuler la modification
+                        </button>
+                    </div>
+                    <div class="col-md-6 text-end pb-3">
+                        <a class="btn btn-primary btn-sm" href="#">
+                            <i class="fa fa-check"></i>&nbsp;Valider et enregistrer la fiche
+                        </a>
+                    </div>
+                </section>
+
+                <section class="bg-light p-3">
+                    <h4>Gestion</h4>
+                        <form>
+                            <fieldset class="row mb-3">
+                                <legend class="col-form-label col-sm-3 pt-0">Statut</legend>
+                                <div class="col-sm-9">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                            value="option1">
+                                        <label class="form-check-label" for="gridRadios1">
+                                            En attente de mise en ligne
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                            value="option2" checked>
+                                        <label class="form-check-label text-success" for="gridRadios2">
+                                            En boutique
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
+                                            value="option3">
+                                        <label class="form-check-label text-danger" for="gridRadios3">
+                                            Retiré
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="row mb-3">
+                                <label class="col-form-label col-sm-3" for="shop">Options</label>
+                                <select class="col-sm-9" id="shop">
+                                    <option value="0"></option>
+                                    <option value="1">Ordinateurs</option>
+                                    <option value="2" selected>Périphériques et composants</option>
+                                    <option value="3">Téléphones</option>
+                                    <option value="4">Objets connectés</option>
+                                </select>
+                            </fieldset>
+                            <fieldset class="row mb-3">
+                                <label for="section" class="col-form-label col-sm-3">Rayon</label>
+                                <select class="col-sm-9" id="section">
+                                    <option value="0"></option>
+                                    <option value="1">Rayon 1</option>
+                                    <option value="2">Rayon 2</option>
+                                    <option value="3">Rayon 3</option>
+                                    <option value="4">Rayon 4</option>
+                                    <option value="5">Rayon 5</option>
+                                </select>   
+                            </fieldset>
+                        </form>
+                </section>
+
+                <section class="bg-light p-3">
+                    <h4>Présentation</h4>
+                    <fieldset class="row mb-3">
+                        <label class="col-form-label col-sm-3" for="brand">Marque</label>
+                        <input type="text" id="brand" class="col-sm-9">
+                    </fieldset>
+
+                    <fieldset class="row mb-3">
+                        <label class="col-form-label col-sm-3" for="reference">Référence du produit</label>
+                        <input type="text" id="reference" class="col-sm-9">
+                    </fieldset>
+
+                    <fieldset class="row mb-3">
+                        <label class="col-form-label col-sm-3" for="tags">Étiquettes</label>
+                        <input type="text" id="tags" class="col-sm-9">
+                    </fieldset>
+
+                    <fieldset class="row mb-3">
+                        <label class="col-form-label col-sm-3" for="price">Prix</label>
+                        <div class="input-group col-sm-9" id="price">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Prix</span>
+                            <input type="text" class="form-control" aria-label="includTax" aria-describedby="includTaxInput">
+                            <span class="input-group-text">€</span>
+                            <span class="input-group-text">éco-participation</span>
+                            <input type="text" class="form-control" aria-label="ecoPart" aria-describedby="ecoPartInput">
+                            <span class="input-group-text">€</span>
+                        </div>
+
+                    </fieldset>
+
+                </section>
+
+
+
+
+                <section class="bg-light p-3">
+                    <h4>Photos</h4>
+                </section>
+                <section class="bg-light p-3">
+                    <h4>Descriptif 1</h4>
+                </section>
+                <section class="bg-light p-3">
+                    <h4>Descriptif 2</h4>
+                </section>
+                <section class="bg-light p-3">
+                    <h4>Descriptif 3</h4>
+                </section>
+
+
+            </main>
+        </div>
+    </div>
+    <!-- CONTENT END -->
+
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
