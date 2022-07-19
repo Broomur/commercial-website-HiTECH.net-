@@ -5,22 +5,21 @@
     <meta charset="UTF-8">
     <title>Hi-TECH.net</title>
     <meta name="viewport" content="width=device-width, intial-scale=1">
+    <link rel="icon" type="image/png" href="img/logo.svg">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- STYLE À DÉPORTER DANS UNE FEUILLE DE STYLE -->
-    <style>
-        h1 {
-            color:#999
-        }
-    </style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- NAVBAR START -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -28,16 +27,17 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="img/logo.svg" alt="logo HiTECH.net" width="30" loading="lazy"> HiTech.NET</a>
+            <a class="navbar-brand" href="#"><img src="img/logo.svg" alt="logo HiTECH.net" width="30" loading="lazy">
+                HiTech.NET</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <h1 class="mt-4">Gestion des produits</h1>
                 <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="img/avataaars.png" alt="avatar admin" width="50" loading="lazy"> Bob
+                            <img src="img/avataaars.png" alt="avatar admin" width="50"> Bob
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#">Mon compte</a></li>
                             <li><a class="dropdown-item" href="#">Déconnexion</a></li>
                             <li>
@@ -49,8 +49,152 @@
                 </ul>
             </div>
         </div>
-      
     </nav>
+    <!-- NAVBAR END-->
+
+
+
+    <!-- CONTENT START -->
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-1 d-none d-md-block col-md-3 pt-3">
+                <section>
+                    <h4><i class="fa fa-home">&nbsp;</i>Accueil</h4>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-item nav-link" href="#">Tableau de bord</a>
+                    </nav>
+                </section>
+                <section>
+                    <h4><i class="fa fa-globe">&nbsp;</i>Site web</h4>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-item nav-link" href="#">Gestion des rubriques</a>
+                        <a class="nav-item nav-link" href="#">Gestion des actualités</a>
+                    </nav>
+                </section>
+                <section>
+                    <h4><i class="fa fa-shopping-basket">&nbsp;</i>Boutique</h4>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-item nav-link" href="#">Gestion des rayons</a>
+                        <a class="nav-item nav-link active" href="#">Gestion des produits</a>
+                        <a class="nav-item nav-link" href="#">Gestion des commandes</a>
+                    </nav>
+                </section>
+                <section>
+                    <h4><i class="fa fa-cogs">&nbsp;</i>Paramètres</h4>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-item nav-link" href="#">Gestion des utilisateurs</a>
+                        <a class="nav-item nav-link" href="#">Gestion des rôles</a>
+                        <a class="nav-item nav-link" href="#">Préférences</a>
+                    </nav>
+                </section>
+            </aside>
+
+            <main class="col-11 col-md-9 mt-4">
+                <section class="row justify-content-between">
+                    <form class="col-12 col-md-4">
+                        <input type="search" id="searchBar" class="formcontrol me-2 rounded border-secondary border-1 border-opacity-50" aria-label="Search" placeholder="Rechercher">
+                        <button type="submit" class="btn btn-sm btn-outline-dark">Rechercher</button>
+                    </form>
+                    <form class="col-12 col-md-2">
+                        <button type="button" class="btn btn-sm btn-primary"><i class="fa fa-plus">&nbsp;</i>Ajouter un produit</button>
+                    </form>
+                </section>
+                <section class="row justify-content-center">
+                    <table class="table table-striped col-12">
+                        <tr class="table-dark">
+                            <th class="border-start"  scope="col">Statut</th>
+                            <th class="border-start"  scope="col">Boutique</th>
+                            <th class="border-start"  scope="col">Rayon</th>
+                            <th class="border-start"  scope="col">Produit</th>
+                            <th class="border-start border-end"  scope="col" class="text-end">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-success border-start">En boutique</td>
+                                <td class="border-start">Périphériques & composants</td>
+                                <td class="border-start">Écrans d'ordinateurs</td>
+                                <td class="border-start">AOC 24B1XHS</td>
+                                <td class="text-end border-start border-end">
+                                    <button type="button" class="btn btn-sm btn-outline-danger"><i
+                                            class="fa fa-archive">&nbsp;</i>Retirer</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa fa-pencil">&nbsp;</i>Modifier</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa fa-tags">&nbsp;</i>Caractéristiques</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-success border-start">En boutique</td>
+                                <td class="border-start">Périphériques & composants</td>
+                                <td class="border-start">Écrans d'ordinateurs</td>
+                                <td class="border-start">AOC 24B2XHS</td>
+                                <td class="text-end border-start border-end">
+                                    <button type="button" class="btn btn-sm btn-outline-danger"><i
+                                            class="fa fa-archive">&nbsp;</i>Retirer</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa fa-pencil">&nbsp;</i>Modifier</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa fa-tags">&nbsp;</i>Caractéristiques</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-danger border-start">Retiré</td>
+                                <td class="border-start">Périphériques & composants</td>
+                                <td class="border-start">Écrans d'ordinateurs</td>
+                                <td class="border-start">AOC 24B3XHS</td>
+                                <td class="text-end border-start border-end">
+                                    <button type="button" class="btn btn-sm btn-outline-success"><i
+                                            class="fa fa-check">&nbsp;</i>Remettre</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa fa-pencil">&nbsp;</i>Modifier</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa fa-tags">&nbsp;</i>Caractéristiques</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-black-50 border-start">En attente</td>
+                                <td class="border-start">Périphériques & composants</td>
+                                <td class="border-start">Écrans d'ordinateurs</td>
+                                <td class="border-start">AOC 24B4XHS</td>
+                                <td class="text-end border-start border-end">
+                                    <button type="button" class="btn btn-sm btn-outline-success"><i
+                                            class="fa fa-check">&nbsp;</i>Mettre en boutique</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa fa-pencil">&nbsp;</i>Modifier</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fa fa-tags">&nbsp;</i>Caractéristiques</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="row justify-content-center">
+                    <nav class="col-2">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link disabled" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </main>
+        </div>
+    </div>
+    <!-- CONTENT END -->
 
 
 
@@ -60,4 +204,4 @@
         crossorigin="anonymous"></script>
 </body>
 
-</html>
+</html> 
