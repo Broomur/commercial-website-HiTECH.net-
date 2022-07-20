@@ -158,34 +158,39 @@
 
                 <section class="bg-light p-3">
                     <h4>Présentation</h4>
-                    <fieldset class="row mb-3">
-                        <label class="col-form-label col-sm-3" for="brand">Marque</label>
-                        <input type="text" id="brand" class="col-sm-9">
-                    </fieldset>
+                    <form>
+                        <fieldset class="row mb-3">
+                            <label class="col-form-label col-sm-3" for="brand">Marque</label>
+                            <input type="text" id="brand" class="col-sm-9">
+                        </fieldset>
 
-                    <fieldset class="row mb-3">
-                        <label class="col-form-label col-sm-3" for="reference">Référence du produit</label>
-                        <input type="text" id="reference" class="col-sm-9">
-                    </fieldset>
+                        <fieldset class="row mb-3">
+                            <label class="col-form-label col-sm-3" for="reference">Référence du produit</label>
+                            <input type="text" id="reference" class="col-sm-9">
+                        </fieldset>
 
-                    <fieldset class="row mb-3">
-                        <label class="col-form-label col-sm-3" for="tags">Étiquettes</label>
-                        <input type="text" id="tags" class="col-sm-9">
-                    </fieldset>
+                        <fieldset class="row mb-3">
+                            <label class="col-form-label col-sm-3" for="tags">Étiquettes</label>
+                            <input type="text" id="tags" class="col-sm-9">
+                        </fieldset>
 
-                    <fieldset class="row mb-3">
-                        <label class="col-form-label col-sm-3" for="price">Prix</label>
-                        <div class="input-group col-sm-9" id="price">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Prix</span>
-                            <input type="text" class="form-control" aria-label="includTax" aria-describedby="includTaxInput">
-                            <span class="input-group-text">€</span>
-                            <span class="input-group-text">éco-participation</span>
-                            <input type="text" class="form-control" aria-label="ecoPart" aria-describedby="ecoPartInput">
-                            <span class="input-group-text">€</span>
-                        </div>
+                        <fieldset class="row mb-3">
+                            <label class="col-form-label col-sm-3" for="price">Prix</label>
+                            <div class="input-group col-sm-9 maxWidth" id="price">
+                                <span class="input-group-text" id="inputGroup-sizing-default">TTC</span>
+                                <input type="text" class="form-control" aria-label="includTax" aria-describedby="includTaxInput">
+                                <span class="input-group-text">€</span>
+                                <span class="input-group-text">éco-participation</span>
+                                <input type="text" class="form-control" aria-label="ecoPart" aria-describedby="ecoPartInput">
+                                <span class="input-group-text">€</span>
+                            </div>
+                        </fieldset>
 
-                    </fieldset>
-
+                        <filedset class="row mb-3">
+                            <label for="markdown" class="col-form-label col-sm-3">Description principale<br>(MarkDown)</label>
+                            <input type="text-area" class="col-sm-9" style="height: 400px">
+                        </filedset>
+                    </form>
                 </section>
 
 

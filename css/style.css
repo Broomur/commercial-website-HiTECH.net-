@@ -18,3 +18,7 @@ section>nav>.nav-link:hover {
     background-color: #0d6efd;
     color: #fff;
 }
+
+.maxWidth {
+    max-width: 75%;
+}
