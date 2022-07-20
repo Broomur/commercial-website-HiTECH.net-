@@ -90,126 +90,174 @@
             </aside>
 
             <main class="col-11 col-md-9 mt-4">
-                <section class="row mt-3">
-                    <div class="col-md-6 d-flex pb-3">
-                        <button class="btn btn-sm btn-outline-secondary">
-                            <i class="fa fa-times"></i>&nbsp;Annuler la modification
-                        </button>
-                    </div>
-                    <div class="col-md-6 text-end pb-3">
-                        <a class="btn btn-primary btn-sm" href="#">
-                            <i class="fa fa-check"></i>&nbsp;Valider et enregistrer la fiche
-                        </a>
-                    </div>
-                </section>
+                <form action="https://httpbin.org/post" method="post">
+                    <section class="row mt-3">
+                        <div class="col-md-6 d-flex pb-3">
+                            <button class="btn btn-sm btn-outline-secondary">
+                                <i class="fa fa-times"></i>&nbsp;Annuler la modification
+                            </button>
+                        </div>
+                        <div class="col-md-6 text-end pb-3">
+                            <button type="submit" class="btn btn-primary btn-sm" href="#">
+                                <i class="fa fa-check"></i>&nbsp;Valider et enregistrer la fiche
+                            </button>
+                        </div>
+                    </section>
 
-                <section class="bg-light p-3">
-                    <h4>Gestion</h4>
-                        <form>
-                            <fieldset class="row mb-3">
-                                <legend class="col-form-label col-sm-3 pt-0">Statut</legend>
-                                <div class="col-sm-9">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                            value="option1">
-                                        <label class="form-check-label" for="gridRadios1">
-                                            En attente de mise en ligne
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
-                                            value="option2" checked>
-                                        <label class="form-check-label text-success" for="gridRadios2">
-                                            En boutique
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
-                                            value="option3">
-                                        <label class="form-check-label text-danger" for="gridRadios3">
-                                            Retiré
-                                        </label>
-                                    </div>
+                    <section class="bg-light p-3 mt-3">
+                        <h4>Gestion</h4>
+
+                        <fieldset class="row mb-3">
+                            <legend class="col-form-label col-sm-3 pt-0">Statut</legend>
+                            <div class="col-sm-9">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="statut" id="gridRadios1"
+                                        value="En attente de mise en ligne" required>
+                                    <label class="form-check-label" for="gridRadios1">
+                                        En attente de mise en ligne
+                                    </label>
                                 </div>
-                            </fieldset>
-                            <fieldset class="row mb-3">
-                                <label class="col-form-label col-sm-3" for="shop">Options</label>
-                                <select class="col-sm-9" id="shop">
-                                    <option value="0"></option>
-                                    <option value="1">Ordinateurs</option>
-                                    <option value="2" selected>Périphériques et composants</option>
-                                    <option value="3">Téléphones</option>
-                                    <option value="4">Objets connectés</option>
-                                </select>
-                            </fieldset>
-                            <fieldset class="row mb-3">
-                                <label for="section" class="col-form-label col-sm-3">Rayon</label>
-                                <select class="col-sm-9" id="section">
-                                    <option value="0"></option>
-                                    <option value="1">Rayon 1</option>
-                                    <option value="2">Rayon 2</option>
-                                    <option value="3">Rayon 3</option>
-                                    <option value="4">Rayon 4</option>
-                                    <option value="5">Rayon 5</option>
-                                </select>   
-                            </fieldset>
-                        </form>
-                </section>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="statut" id="gridRadios2"
+                                        value="En boutique">
+                                    <label class="form-check-label text-success" for="gridRadios2">
+                                        En boutique
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="statut" id="gridRadios3"
+                                        value="Retiré">
+                                    <label class="form-check-label text-danger" for="gridRadios3">
+                                        Retiré
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="row mb-3">
+                            <label class="col-form-label col-sm-3" for="shop">Options</label>
+                            <select name="shop" class="col-sm-9" id="shop" required>
+                                <option value="" selected>Choisissez une boutique</option>
+                                <option value="Ordinateurs">Ordinateurs</option>
+                                <option value="Périphériques &amp; composants">Périphériques &amp; composants</option>
+                                <option value="Téléphones">Téléphones</option>
+                                <option value="Objets connectés">Objets connectés</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="row mb-3">
+                            <label for="section" class="col-form-label col-sm-3">Rayon</label>
+                            <select name="section" class="col-sm-9" id="section" required>
+                                <option value="" selected>Choisissez un rayon</option>
+                                <option value="1">Rayon 1</option>
+                                <option value="2">Rayon 2</option>
+                                <option value="3">Rayon 3</option>
+                                <option value="4">Rayon 4</option>
+                                <option value="5">Rayon 5</option>
+                            </select>
+                        </fieldset>
 
-                <section class="bg-light p-3">
-                    <h4>Présentation</h4>
-                    <form>
+                    </section>
+
+                    <section class="bg-light p-3 mt-3">
+                        <h4>Présentation</h4>
+
                         <fieldset class="row mb-3">
                             <label class="col-form-label col-sm-3" for="brand">Marque</label>
-                            <input type="text" id="brand" class="col-sm-9">
+                            <input name="brand" type="text" id="brand" class="col-sm-9" required>
                         </fieldset>
 
                         <fieldset class="row mb-3">
                             <label class="col-form-label col-sm-3" for="reference">Référence du produit</label>
-                            <input type="text" id="reference" class="col-sm-9">
+                            <input name="reference" type="text" id="reference" class="col-sm-9" required>
                         </fieldset>
 
                         <fieldset class="row mb-3">
                             <label class="col-form-label col-sm-3" for="tags">Étiquettes</label>
-                            <input type="text" id="tags" class="col-sm-9">
+                            <input name="tags" type="text" id="tags" class="col-sm-9" required>
                         </fieldset>
 
                         <fieldset class="row mb-3">
                             <label class="col-form-label col-sm-3" for="price">Prix</label>
-                            <div class="input-group col-sm-9 maxWidth" id="price">
+                            <div class="input-group col-sm-9 maxWidth px-0" id="price">
                                 <span class="input-group-text" id="inputGroup-sizing-default">TTC</span>
-                                <input type="text" class="form-control" aria-label="includTax" aria-describedby="includTaxInput">
+                                <input type="text" class="form-control" aria-label="includTax"
+                                    aria-describedby="includTaxInput">
                                 <span class="input-group-text">€</span>
                                 <span class="input-group-text">éco-participation</span>
-                                <input type="text" class="form-control" aria-label="ecoPart" aria-describedby="ecoPartInput">
+                                <input type="text" class="form-control" aria-label="ecoPart"
+                                    aria-describedby="ecoPartInput">
                                 <span class="input-group-text">€</span>
                             </div>
                         </fieldset>
 
                         <filedset class="row mb-3">
-                            <label for="markdown" class="col-form-label col-sm-3">Description principale<br>(MarkDown)</label>
+                            <label for="markdown" class="col-form-label col-sm-3">Description
+                                principale<br>(MarkDown)</label>
                             <input type="text-area" class="col-sm-9" style="height: 400px">
                         </filedset>
-                    </form>
-                </section>
+
+                    </section>
 
 
 
 
-                <section class="bg-light p-3">
-                    <h4>Photos</h4>
-                </section>
-                <section class="bg-light p-3">
-                    <h4>Descriptif 1</h4>
-                </section>
-                <section class="bg-light p-3">
-                    <h4>Descriptif 2</h4>
-                </section>
-                <section class="bg-light p-3">
-                    <h4>Descriptif 3</h4>
-                </section>
+                    <section class="bg-light p-3 mt-3">
+                        <h4>Photos</h4>
+
+                        <fieldset class="row mb-3">
+                            <label class="col-form-label col-sm-3" for="photo1">Photo 1</label>
+                            <input type="file" accept="image/*" class="form-control col-sm-9 maxWidth" id="photo1">
+                        </fieldset>
+
+                        <fieldset class="row mb-3">
+                            <label class="col-form-label col-sm-3" for="photo2">Photo 2</label>
+                            <input type="file" accept="image/*" class="form-control col-sm-9 maxWidth" id="photo2">
+                        </fieldset>
+
+                        <fieldset class="row mb-3">
+                            <label class="col-form-label col-sm-3" for="photo3">Photo 3</label>
+                            <input type="file" accept="image/*" class="form-control col-sm-9 maxWidth" id="photo3">
+                        </fieldset>
+
+                        <fieldset class="row mb-3">
+                            <label class="col-form-label col-sm-3" for="photo4">Photo 4</label>
+                            <input type="file" accept="image/*" class="form-control col-sm-9 maxWidth" id="photo4">
+                        </fieldset>
+
+                        <fieldset class="row mb-3">
+                            <label class="col-form-label col-sm-3" for="photo5">Photo 5</label>
+                            <input type="file" accept="image/*" class="form-control col-sm-9 maxWidth" id="photo5">
+                        </fieldset>
 
 
+                    </section>
+                    <section class="bg-light p-3 mt-3">
+                        <h4>Descriptif 1</h4>
+
+
+                        <fieldset class="row mb-3">
+                            <label class="col-form-label col-sm-3" for="title1">Titre</label>
+                            <input type="text" class="col-sm-9" id="title1">
+                        </fieldset>
+
+                        <fieldset class="row mb-3">
+                            <label class="col-form-label col-sm-3" for="photo6">Image</label>
+                            <input type="file" accept="image/*" class="form-control col-sm-9 maxWidth" id="photo6">
+                        </fieldset>
+
+                        <fieldset class="row mb-3">
+                            <label class="col-form-label col-sm-3" for="text1">Texte</label>
+                            <input type="text-area" class="col-sm-9" id="text1" style="height: 400px">
+                        </fieldset>
+
+                    </section>
+                    <section class="bg-light p-3 mt-3">
+                        <h4>Descriptif 2</h4>
+                    </section>
+                    <section class="bg-light p-3 mt-3">
+                        <h4>Descriptif 3</h4>
+                    </section>
+
+                </form>
             </main>
         </div>
     </div>
