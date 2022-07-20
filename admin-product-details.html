@@ -91,18 +91,18 @@
 
             <main class="col-11 col-md-9 mt-4">
                 <form action="https://httpbin.org/post" method="post">
-                    <section class="row mt-3">
+                    <div class="row mt-3">
                         <div class="col-md-6 d-flex pb-3">
                             <button class="btn btn-sm btn-outline-secondary">
                                 <i class="fa fa-times"></i>&nbsp;Annuler la modification
                             </button>
                         </div>
                         <div class="col-md-6 text-end pb-3">
-                            <button type="submit" class="btn btn-primary btn-sm" href="#">
+                            <button type="submit" class="btn btn-primary btn-sm">
                                 <i class="fa fa-check"></i>&nbsp;Valider et enregistrer la fiche
                             </button>
                         </div>
-                    </section>
+                    </div>
 
                     <section class="bg-light p-3 mt-3">
                         <h4>Gestion</h4>
@@ -177,23 +177,21 @@
 
                         <fieldset class="row mb-3">
                             <label class="col-form-label col-sm-3" for="price">Prix</label>
-                            <div class="input-group col-sm-9 maxWidth px-0" id="price">
+                            <div class="input-group col-sm-9 maxWidth px-0">
                                 <span class="input-group-text" id="inputGroup-sizing-default">TTC</span>
-                                <input type="text" class="form-control" aria-label="includTax"
-                                    aria-describedby="includTaxInput">
+                                <input type="text" class="form-control" id="price" name="price">
                                 <span class="input-group-text">€</span>
                                 <span class="input-group-text">éco-participation</span>
-                                <input type="text" class="form-control" aria-label="ecoPart"
-                                    aria-describedby="ecoPartInput">
+                                <input type="text" class="form-control">
                                 <span class="input-group-text">€</span>
                             </div>
                         </fieldset>
 
-                        <filedset class="row mb-3">
+                        <fieldset class="row mb-3">
                             <label for="markdown" class="col-form-label col-sm-3">Description
                                 principale<br>(MarkDown)</label>
-                            <input type="text-area" class="col-sm-9" style="height: 400px">
-                        </filedset>
+                            <textarea class="col-sm-9" id="markdown" name="markdown" rows="10" cols="30"></textarea>
+                            </fieldset>
 
                     </section>
 
@@ -205,56 +203,82 @@
 
                         <fieldset class="row mb-3">
                             <label class="col-form-label col-sm-3" for="photo1">Photo 1</label>
-                            <input type="file" accept="image/*" class="form-control col-sm-9 maxWidth" id="photo1">
+                            <input type="file" accept="image/*" class="form-control col-sm-9 maxWidth" id="photo1" name="photo1">
                         </fieldset>
 
                         <fieldset class="row mb-3">
                             <label class="col-form-label col-sm-3" for="photo2">Photo 2</label>
-                            <input type="file" accept="image/*" class="form-control col-sm-9 maxWidth" id="photo2">
+                            <input type="file" accept="image/*" class="form-control col-sm-9 maxWidth" id="photo2" name="photo2">
                         </fieldset>
 
                         <fieldset class="row mb-3">
                             <label class="col-form-label col-sm-3" for="photo3">Photo 3</label>
-                            <input type="file" accept="image/*" class="form-control col-sm-9 maxWidth" id="photo3">
+                            <input type="file" accept="image/*" class="form-control col-sm-9 maxWidth" id="photo3" name="photo3">
                         </fieldset>
 
                         <fieldset class="row mb-3">
                             <label class="col-form-label col-sm-3" for="photo4">Photo 4</label>
-                            <input type="file" accept="image/*" class="form-control col-sm-9 maxWidth" id="photo4">
+                            <input type="file" accept="image/*" class="form-control col-sm-9 maxWidth" id="photo4" name="photo4">
                         </fieldset>
 
                         <fieldset class="row mb-3">
                             <label class="col-form-label col-sm-3" for="photo5">Photo 5</label>
-                            <input type="file" accept="image/*" class="form-control col-sm-9 maxWidth" id="photo5">
+                            <input type="file" accept="image/*" class="form-control col-sm-9 maxWidth" id="photo5" name="photo5">
                         </fieldset>
 
 
                     </section>
                     <section class="bg-light p-3 mt-3">
                         <h4>Descriptif 1</h4>
-
-
                         <fieldset class="row mb-3">
                             <label class="col-form-label col-sm-3" for="title1">Titre</label>
-                            <input type="text" class="col-sm-9" id="title1">
+                            <input type="text" class="col-sm-9" id="title1" name="descript1" required>
                         </fieldset>
 
                         <fieldset class="row mb-3">
                             <label class="col-form-label col-sm-3" for="photo6">Image</label>
-                            <input type="file" accept="image/*" class="form-control col-sm-9 maxWidth" id="photo6">
+                            <input type="file" accept="image/*" class="form-control col-sm-9 maxWidth" id="photo6" name="photo6">
                         </fieldset>
 
                         <fieldset class="row mb-3">
                             <label class="col-form-label col-sm-3" for="text1">Texte</label>
-                            <input type="text-area" class="col-sm-9" id="text1" style="height: 400px">
+                            <textarea class="col-sm-9" id="text1" name="text1" rows="10" cols="30"></textarea>
                         </fieldset>
 
                     </section>
                     <section class="bg-light p-3 mt-3">
                         <h4>Descriptif 2</h4>
+                        <fieldset class="row mb-3">
+                            <label class="col-form-label col-sm-3" for="title2">Titre</label>
+                            <input type="text" class="col-sm-9" id="title2" name="descript2">
+                        </fieldset>
+
+                        <fieldset class="row mb-3">
+                            <label class="col-form-label col-sm-3" for="photo7">Image</label>
+                            <input type="file" accept="image/*" class="form-control col-sm-9 maxWidth" id="photo7" name="photo7">
+                        </fieldset>
+
+                        <fieldset class="row mb-3">
+                            <label class="col-form-label col-sm-3" for="text2">Texte</label>
+                            <textarea class="col-sm-9" id="text2" name="text2" rows="10" cols="30"></textarea>
+                        </fieldset>
                     </section>
                     <section class="bg-light p-3 mt-3">
                         <h4>Descriptif 3</h4>
+                        <fieldset class="row mb-3">
+                            <label class="col-form-label col-sm-3" for="title3">Titre</label>
+                            <input type="text" class="col-sm-9" id="title3" name="descript3">
+                        </fieldset>
+
+                        <fieldset class="row mb-3">
+                            <label class="col-form-label col-sm-3" for="photo8">Image</label>
+                            <input type="file" accept="image/*" class="form-control col-sm-9 maxWidth" id="photo8" name="photo8">
+                        </fieldset>
+
+                        <fieldset class="row mb-3">
+                            <label class="col-form-label col-sm-3" for="text3">Texte</label>
+                            <textarea class="col-sm-9" id="text3" name="text3" rows="10" cols="30"></textarea>
+                        </fieldset>
                     </section>
 
                 </form>
