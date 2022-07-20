@@ -22,3 +22,19 @@ section>nav>.nav-link:hover {
 .maxWidth {
     max-width: 75%;
 }
+
+.bg-header {
+    background-image: url("../img/header.jpg");
+}
+
+.bg-teint {
+    background-color: rgba(255,255,255,.9);
+}
+
+a,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: black;
+}
+
